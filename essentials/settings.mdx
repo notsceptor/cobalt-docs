@@ -21,13 +21,13 @@ Example: `mintlify`
     <ResponseField name="group" type="string">
     The name of the group.
 
-    Example: `Settings`
+    Example: `Getting Started` 
 
     </ResponseField>
     <ResponseField name="pages" type="string[]">
     The relative paths to the markdown files that will serve as pages.
 
-    Example: `["customization", "page"]`
+    Example: `["introduction", "installation"]` 
 
     </ResponseField>
 
@@ -38,13 +38,13 @@ Example: `mintlify`
   Path to logo image or object with path to "light" and "dark" mode logo images
   <Expandable title="Logo">
     <ResponseField name="light" type="string">
-      Path to the logo in light mode
+      Path to the logo in light mode (e.g., `/images/logo-light.svg`)
     </ResponseField>
     <ResponseField name="dark" type="string">
-      Path to the logo in dark mode
+      Path to the logo in dark mode (e.g., `/images/logo-dark.svg`)
     </ResponseField>
     <ResponseField name="href" type="string" default="/">
-      Where clicking on the logo links you to
+      Where clicking on the logo links you to (e.g., your bot's website)
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -57,24 +57,33 @@ Example: `mintlify`
   Hex color codes for your global theme
   <Expandable title="Colors">
     <ResponseField name="primary" type="string" required>
-      The primary color. Used for most often for highlighted content, section
-      headers, accents, in light mode
+      The primary color. Used most often for highlighted content, section headers, accents, in light mode
+      
+      **Recommendation:** `#FFFFFF` (white) or a light gray like `#F5F5F5`
+
     </ResponseField>
     <ResponseField name="light" type="string">
-      The primary color for dark mode. Used for most often for highlighted
-      content, section headers, accents, in dark mode
+      The primary color for dark mode. Used most often for highlighted content, section headers, accents.
+
+      **Recommendation:** A darker gray like `#555555` or `#333333`
     </ResponseField>
     <ResponseField name="dark" type="string">
-      The primary color for important buttons
+      The primary color for important buttons. 
+
+      **Recommendation:** A medium gray like `#888888` or your primary color with reduced opacity.
     </ResponseField>
     <ResponseField name="background" type="object">
       The color of the background in both light and dark mode
       <Expandable title="Object">
         <ResponseField name="light" type="string" required>
           The hex color code of the background in light mode
+
+            **Recommendation:**  `#FFFFFF` (white) or an off-white like `#FAFAFA`
         </ResponseField>
         <ResponseField name="dark" type="string" required>
           The hex color code of the background in dark mode
+
+            **Recommendation:** `#121212` or a very dark gray
         </ResponseField>
       </Expandable>
     </ResponseField>
